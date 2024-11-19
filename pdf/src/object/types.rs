@@ -159,6 +159,9 @@ pub struct Catalog {
     #[pdf(key="StructTreeRoot")]
     pub struct_tree_root: Option<StructTreeRoot>,
 
+    #[pdf(key="AF")]
+    pub associated_files: Option<MaybeRef<Vec<FileSpec>>>,
+
 // MarkInfo: dict
 // Lang: text string
 // SpiderInfo: dict
@@ -1497,6 +1500,24 @@ pub struct NameDictionary {
 pub struct FileSpec {
     #[pdf(key="EF")]
     pub ef: Option<Files<Ref<Stream<EmbeddedFile>>>>,
+
+    #[pdf(key="F")]
+    pub f: Option<PdfString>,
+    
+    #[pdf(key="UF")]
+    pub uf: Option<PdfString>,
+
+    #[pdf(key="DOS")]
+    pub dos: Option<PdfString>,
+
+    #[pdf(key="Mac")]
+    pub mac: Option<PdfString>,
+
+    #[pdf(key="Unix")]
+    pub unix: Option<PdfString>,
+
+    #[pdf(key="Desc")]
+    pub description: Option<PdfString>,
     /*
     #[pdf(key="RF")]
     rf: Option<Files<RelatedFilesArray>>,
