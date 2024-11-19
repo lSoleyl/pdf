@@ -1568,13 +1568,13 @@ pub struct EmbeddedFileParamDict {
     pub size: Option<i32>,
     
     #[pdf(key="CreationDate")]
-    creationdate: Option<Date>,
+    creationdate: Option<PdfString>,
 
     #[pdf(key="ModDate")]
-    moddate: Option<Date>,
+    moddate: Option<PdfString>,
 
     #[pdf(key="Mac")]
-    mac: Option<Date>,
+    mac: Option<PdfString>,
 
     #[pdf(key="CheckSum")]
     checksum: Option<PdfString>,
